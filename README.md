@@ -4,7 +4,7 @@
 
 Each skill fixes a problem that kept happening in that setup: the agent said "done" without checking, sent a wrong price to a client, paused more than it was asked to, got stuck mid-task overnight, burned the plan on the expensive model, or redid the same work three times. Each one comes from real repeated failures in that setup, and each skill's own repo shows what changes with it and without it.
 
-Plain instructions (`SKILL.md`), no hidden scripts that call the network. They work in Claude Code and in any agent that reads `SKILL.md` skills.
+Mostly plain instructions (`SKILL.md`). Three include short Python scripts you can read first: `hora-exacta` (reads the computer clock and asks one public IP-location service, ipwho.is, for the city and time zone, cached for 6 hours), `skill-harvest` and `session-watchdog` (local files only, no network). They work in Claude Code and in any agent that reads `SKILL.md` skills.
 
 ## Install
 
