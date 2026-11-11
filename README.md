@@ -14,6 +14,13 @@ All of them, with the [skills CLI](https://skills.sh) (it asks which ones you wa
 npx skills add RabbitDesigns22/claude-skills
 ```
 
+As a Claude Code plugin:
+
+```
+/plugin marketplace add RabbitDesigns22/claude-skills
+/plugin install rabbit-skills@rabbit-skills
+```
+
 Or copy any folder from `skills/` into `~/.claude/skills/`.
 
 ## Get it right the first time
