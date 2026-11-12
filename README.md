@@ -1,6 +1,6 @@
 # Claude skills for running a business with AI agents
 
-**20 agent skills from a small agency that runs 20+ Claude Code sessions in parallel, every day, for real clients.**
+**22 agent skills from a small agency that runs 20+ Claude Code sessions in parallel, every day, for real clients.**
 
 Each skill fixes a problem that kept happening in that setup: the agent said "done" without checking, sent a wrong price to a client, paused more than it was asked to, got stuck mid-task overnight, burned the plan on the expensive model, or redid the same work three times. Each one comes from real repeated failures in that setup, and each skill's own repo shows what changes with it and without it.
 
@@ -27,6 +27,7 @@ Or copy any folder from `skills/` into `~/.claude/skills/`.
 
 | Skill | What it fixes |
 |---|---|
+| [full-power](skills/full-power) | the best the model can do on high-stakes work: strongest model only for the hard step, best-of-N with a judge, fresh-eyes verifier |
 | [one-pass](skills/one-pass) | stops paying tokens for rework: acceptance list first, read once, no blind retries |
 | [never-twice](skills/never-twice) | a shared error log so no session repeats a known mistake |
 | [one-answer](skills/one-answer) | one thought-through answer instead of plan, fix, new plan |
@@ -62,12 +63,13 @@ Or copy any folder from `skills/` into `~/.claude/skills/`.
 | [whatsapp-number-onboarding](skills/whatsapp-number-onboarding) | connect a number to the WhatsApp Cloud API in the safe order |
 | [small-budget-ads](skills/small-budget-ads) | Meta Ads rules for 1-5 USD a day ad sets |
 | [proposal-pdf](skills/proposal-pdf) | short PDF proposals with every price checked against its source |
+| [music-by-niche](skills/music-by-niche) | music that matches the client's business, never repeated for a client or across clients in 3 weeks |
 
 Each skill also has its own repo with a longer README, a with/without example and its test score: `github.com/RabbitDesigns22/<skill-name>`.
 
 ## Español
 
-20 skills para agentes de IA, sacadas de una agencia chica que trabaja todos los días con más de 20 sesiones de Claude Code en paralelo y clientes reales. Cada una arregla un problema que se repetía: decir "listo" sin comprobar, mandar un precio mal, apagar más de lo pedido, quedarse pegado de noche, gastar el plan en el modelo caro. Cada repo muestra qué cambia con la skill y sin ella.
+22 skills para agentes de IA, sacadas de una agencia chica que trabaja todos los días con más de 20 sesiones de Claude Code en paralelo y clientes reales. Cada una arregla un problema que se repetía: decir "listo" sin comprobar, mandar un precio mal, apagar más de lo pedido, quedarse pegado de noche, gastar el plan en el modelo caro. Cada repo muestra qué cambia con la skill y sin ella.
 
 Instalar todas: `npx skills add RabbitDesigns22/claude-skills`
 
