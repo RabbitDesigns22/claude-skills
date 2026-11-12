@@ -1,7 +1,7 @@
 ---
 name: music-by-niche
 description: >-
-  Load before choosing background music for a video, reel, story or ad for a business or a client: "pick music for this video", "soundtrack", "background track", "the same song again", "the audio is too loud", "música para el video", "música de spa", "la misma canción", "el audio está duro". It picks the track by the client's niche with common sense (spa or lounge for a beauty salon, percussion for construction, steady industrial for gas and installations, playful for kids' schools, hip-hop for a barbershop), never repeats a track for the same client and never gives two clients the same track within 3 weeks, uses only sources whose license allows paid ads, keeps a usage log, and checks loudness on the final video. Not for composing music and not for cutting the edit to the beat (use a beat-sync editing skill).
+  Load before choosing background music for a video, reel, story or ad for a business or a client: "pick music for this video", "soundtrack", "background track", "the same song again", "the audio is too loud", "música para el video", "música de spa", "la misma canción", "el audio está duro". It picks the track by the client's niche with common sense (spa or lounge for a beauty salon, percussion for construction, steady industrial for gas and installations, playful for kids' schools, hip-hop for a barbershop), picks at random among eligible tracks, never repeats a track for the same client or between two clients of the same niche, never gives two clients the same track within 3 weeks, uses only sources whose license allows paid ads with a proof file per track, adds the attribution line to the ad copy for CC-BY music, keeps a usage log, and checks loudness on the final video. Not for composing music and not for cutting the edit to the beat (use a beat-sync editing skill).
 license: MIT
 ---
 
@@ -37,19 +37,28 @@ Common sense on top of the table: a spa promo stays soft even when the offer is 
 
 ## 3. Pick the track (in this order)
 
-1. Candidates = tracks whose style is in the niche's list.
+1. Candidates = tracks whose style is in the niche's list **and** that have a license record (source, license, and credit text if the license requires attribution).
 2. Drop every track this client has ever used.
-3. Drop every track any client used this week or the 2 weeks before or after.
-4. Prefer the niche's first style, then the least-used track overall.
-5. Nothing left? **Stop and add tracks for that niche.** Do not repeat, and do not borrow a style from an unrelated niche.
+3. Drop every track any **other client in the same niche** has ever used: two beauty salons never share a song, even months apart.
+4. Drop every track any client used this week or the 2 weeks before or after.
+5. Pick **at random** among what is left in the niche's first style; use the backup styles only when the first is empty. Always taking "the first one" makes every client sound the same.
+6. Nothing left? **Stop and add tracks for that niche.** Do not repeat, and do not borrow a style from an unrelated niche.
 
-Automate steps 1-5 in a small script with tests for each rule. A human picking "a track I like" is how the same song ends up in every video.
+Automate it in a small script with a test for each rule. A human picking "a track I like" is how the same song ends up in every video.
 
-## 4. Only sources that allow paid ads
+## 4. Only sources that allow paid ads, with proof per track
 
-- Use a royalty-free library whose license explicitly allows commercial use in advertising (for example Mixkit's free music license, or a paid library you hold a license for). Read the license page before the first use and note which license each track came under.
-- Never YouTube rips, streaming services, TikTok sounds or commercial songs: paid ads with them get muted, rejected or claimed.
-- Prefer instrumentals. Vocals fight with on-screen text and voice-over.
+Order of preference that worked for the author (licenses read in Nov 2026; re-read them yourself):
+1. **Mixkit**: free music license that allows online ads, no attribution. Its terms forbid bots and mass downloads, so you download only the chosen track, one at a time. It does not cover music used inside a video game.
+2. **Pixabay Music**: commercial use, no attribution, no robots. Save the license certificate of each track. Some tracks are AI-made and some get claimed by Content ID, so check the author.
+3. **Incompetech (Kevin MacLeod)**: CC-BY 4.0 with a public JSON catalog; **attribution required**.
+4. **Openverse**: CC0 or CC-BY only, via its public API.
+- Platform libraries (Meta Sound Collection, YouTube Audio Library) can only be added inside their own platform. Do not download them for your render.
+- **Never:** trending in-app music (personal use only), NC or ND licenses, the "free" tiers of paid libraries, streaming rips, commercial songs. Never register a library track in a rights-management system.
+
+**Proof per track:** date, track URL, license URL, author, license, and the certificate or ISRC if there is one. Store it next to the file. No proof, no use.
+
+**Attribution:** for CC-BY tracks, put the exact credit line in the ad's primary text (Meta ads have no description field). If the credit is missing, the video does not ship.
 
 ## 5. Before delivery
 
