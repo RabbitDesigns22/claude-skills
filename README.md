@@ -41,7 +41,7 @@ Or copy any folder from `skills/` into `~/.claude/skills/`.
 | Skill | What it fixes |
 |---|---|
 | [model-per-chat](skills/model-per-chat) | the right model for each chat: cheap base, climbs to the top model only for the hard or irreversible step |
-| [session-watchdog](skills/session-watchdog) | wakes the sessions that got stuck mid-task, leaves the rest alone |
+| [session-watchdog](skills/session-watchdog) | finds the sessions that got stuck mid-task and wakes them on your yes |
 | [in-the-loop](skills/in-the-loop) | a live board so parallel sessions know what the others changed |
 | [skill-harvest](skills/skill-harvest) | reads all your sessions and finds the skills you are missing or forgot to load |
 | [hora-exacta](skills/hora-exacta) | real date and time in every message, so nothing lands on the wrong day |

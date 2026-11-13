@@ -69,7 +69,7 @@ Status words per cell: `ok`, `missing`, `wrong` (say what), `not yet due`, `not 
 - "Scheduled": only for rows you read back in the scheduler's list in this check.
 - Never from: a tool status, a task marked "succeeded", a toast, a log line, an earlier report, or memory.
 - If you could not look (login expired, page blocked), write `not checked` and why. "Unknown" beats "probably fine".
-- If something is wrong and you can safely fix it (reschedule, re-upload, republish a missed slot with the owner's approval where required), do it, then re-verify and show the new evidence.
+- If something is wrong, propose the fix (reschedule, re-upload, republish a missed slot). Before you republish or reschedule anything, show the owner what goes out, on which account and when, and wait for their yes; a post is public. Then re-verify and show the new evidence. A run with nobody to answer lists the fix in its report and changes nothing.
 
 ### 6. Recurring cadence
 
@@ -85,7 +85,7 @@ Plan: 3 items for Tuesday. Reported at 21:40.
 | # | Item | Planned | Scheduled | Live | Gap and cause | Fix |
 |---|---|---|---|---|---|---|
 | 1 | Page A, FB, post | Tue 10:00 | ok | ok | none | none |
-| 2 | Page A, IG, reel | Tue 10:00 | ok | missing | cross-post to IG failed, no error shown | republished manually 21:45, now live (verified) |
+| 2 | Page A, IG, reel | Tue 10:00 | ok | missing | cross-post to IG failed, no error shown | owner said yes, republished 21:45, now live (verified) |
 | 3 | Page B, FB, reel | Tue 18:00 | wrong: set to 08:00 | ok at wrong hour | timezone shift (scheduler on another zone) | account timezone set, note for next batch |
 
 Bad report: "All 3 scheduled and published." (came from three success toasts.)

@@ -35,6 +35,8 @@ When you state a limit, say which of the four it is about.
 Business name exactly as customers will see it, legal name, country, full address, phone, website or Facebook page, email, logo, and the number to connect. The number must not have WhatsApp installed (if it does, delete the WhatsApp account on that phone first). Decide who invents and keeps the 6-digit PIN.
 
 ## Safe order (each step ends with a read-back)
+Steps 6, 8 and 9 change live systems (a hosting project, Meta's registration, a public app). Before each one, show the owner the exact call or change: project name, variable names and values with secrets masked, endpoint, phone number ID. Run it only after their yes. The same goes for deregistering, deleting or moving a number.
+
 1. **Portfolio** (business.facebook.com): fill *Business info* completely (legal name, address, phone, website) **before** adding a number. With it empty, onboarding failed with "your business doesn't meet WhatsApp policy" (#2494070) `[field]`.
 2. **WhatsApp account + number** (Portfolio settings → Accounts → WhatsApp accounts → Add → new number). Display name = **the client's business name**, never the agency's. Verify by SMS, or VOICE for landlines `[official]`. Read back: the number appears under the WABA.
 3. **Meta app** (developers.facebook.com → Create app → WhatsApp use case), linked to the **same portfolio that owns the WABA**. App in one portfolio and WABA in another: everything showed green and no message was delivered; moving the app into the WABA's portfolio fixed it `[field]`. Settings → Basic: privacy/terms/data-deletion URLs that return 200, category, icon.
