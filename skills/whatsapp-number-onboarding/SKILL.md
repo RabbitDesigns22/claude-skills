@@ -35,7 +35,7 @@ When you state a limit, say which of the four it is about.
 Business name exactly as customers will see it, legal name, country, full address, phone, website or Facebook page, email, logo, and the number to connect. The number must not have WhatsApp installed (if it does, delete the WhatsApp account on that phone first). Decide who invents and keeps the 6-digit PIN.
 
 ## Safe order (each step ends with a read-back)
-Steps 6, 8 and 9 change live systems (a hosting project, Meta's registration, a public app). Before each one, show the owner the exact call or change: project name, variable names and values with secrets masked, endpoint, phone number ID. Run it only after their yes. The same goes for deregistering, deleting or moving a number.
+Steps 6, 7, 8 and 9 change live systems (a hosting project, Meta's webhook and subscriptions, Meta's registration, a public app), and so do the fixes in the troubleshooting table that change a webhook, a subscription or an app. Before each one, show the owner the exact call or change: project name, variable names and values with secrets masked, endpoint, phone number ID. Run it only after their yes. The same goes for deregistering, deleting or moving a number.
 
 1. **Portfolio** (business.facebook.com): fill *Business info* completely (legal name, address, phone, website) **before** adding a number. With it empty, onboarding failed with "your business doesn't meet WhatsApp policy" (#2494070) `[field]`.
 2. **WhatsApp account + number** (Portfolio settings → Accounts → WhatsApp accounts → Add → new number). Display name = **the client's business name**, never the agency's. Verify by SMS, or VOICE for landlines `[official]`. Read back: the number appears under the WABA.
@@ -54,7 +54,7 @@ The display name can stay "in review" for days while the number already works `[
 ## Golden rules
 - **Same portfolio** for the app and the WABA. If the client's own portfolio is stuck in review, a field-tested way out is to put the number in a WABA in a portfolio that works (yours), with the app in that same portfolio, inside the 2-number cap `[field]`. The official long-term path is becoming a Tech Provider with Embedded Signup.
 - **One app per client, by default.** The app's callback URL is the default destination. Meta supports per-WABA and per-number webhook overrides `[official]`, but if you have not tested them, keep one app per client.
-- **When the hosting domain changes, update the webhook in Meta at that moment** and read it back. A domain change silently stopped a bot `[field]`.
+- **When the hosting domain changes, update the webhook in Meta at that moment** (show the new URL and get the owner's yes, as above) and read it back. A domain change silently stopped a bot `[field]`.
 - **Never use the "Continue" path that installs the WhatsApp Business app on the phone** for a number that should stay on Cloud API: it takes the number off the API `[field]`.
 - **Try what breaks nothing first.** Deregistering, deleting or moving a number come last, only if Meta requires it (see the limits above).
 - **A health check is green only when Meta says so:** read the phone status from Meta. A valid token proves nothing about the number `[field]`.

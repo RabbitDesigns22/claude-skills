@@ -41,7 +41,7 @@ Close the confirmation toast. Open the scheduler's list view (scheduled posts, p
 - the right media (open the preview; count items in a carousel)
 - caption intact (first words, line breaks, links, hashtags, no truncation)
 
-Any mismatch: fix it now, then read it back again. A row not found in the list is "not scheduled", whatever the toast said.
+Any mismatch: show the owner the fix (which post, what changes) and apply it only after their yes, then read it back again. A row not found in the list is "not scheduled", whatever the toast said.
 
 ### 3. After the slot passes: check the LIVE surface
 
@@ -86,7 +86,7 @@ Plan: 3 items for Tuesday. Reported at 21:40.
 |---|---|---|---|---|---|---|
 | 1 | Page A, FB, post | Tue 10:00 | ok | ok | none | none |
 | 2 | Page A, IG, reel | Tue 10:00 | ok | missing | cross-post to IG failed, no error shown | owner said yes, republished 21:45, now live (verified) |
-| 3 | Page B, FB, reel | Tue 18:00 | wrong: set to 08:00 | ok at wrong hour | timezone shift (scheduler on another zone) | account timezone set, note for next batch |
+| 3 | Page B, FB, reel | Tue 18:00 | wrong: set to 08:00 | ok at wrong hour | timezone shift (scheduler on another zone) | owner said yes, account timezone set, note for next batch |
 
 Bad report: "All 3 scheduled and published." (came from three success toasts.)
 

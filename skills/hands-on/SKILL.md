@@ -17,7 +17,7 @@ For each step of the plan, ask: **can I do this myself with the tools I have rig
 |---|---|
 | Clicking, toggling, filling non-secret fields in a web dashboard where the user's session is already open in your browser | **You** |
 | Reading a value from a page, an API or a file (IDs, URLs, statuses, settings) | **You**. Never ask the user to copy an ID you can read |
-| Running a command, a deploy, a test, an API read | **You** |
+| Running a command, a test, an API read, a deploy to a preview or test environment | **You**. A deploy to a live app is public: ask first (see below) |
 | Writing or editing a file, a config, a document | **You** |
 | Checking that something worked (read it back, open the page, send the test) | **You** |
 | A one-time code sent to their phone or email (SMS, 2FA, verification) | **User** |

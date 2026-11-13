@@ -47,7 +47,7 @@ A subagent that has not seen your reasoning gets: the original request, the resu
 > Assume this result is wrong. Find the most likely way it fails the request: a check it does not meet, a fact not traceable to a source, an edge case, a requirement read too narrowly, something changed that should not have been. Quote the evidence. If you find nothing, say what you checked.
 
 - Fix what it finds, then rerun the check that failed.
-- For X steps the verifier sees the exact action (what, where, what must not change) and the action runs only if it passes.
+- For X steps the verifier sees the exact action (what, where, what must not change) and the action runs only if it passes **and** the user said yes. The check never replaces the user's yes.
 - Before a big irreversible plan, run the same verifier as a **pre-mortem**: "it is a week later and this failed; why?"
 
 ## 5. Know the ceiling: tools instead of guesses
