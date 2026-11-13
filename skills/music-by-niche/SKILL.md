@@ -1,7 +1,7 @@
 ---
 name: music-by-niche
 description: >-
-  Load before choosing background music for a video, reel, story or ad for a business or a client: "pick music for this video", "soundtrack", "background track", "the same song again", "the audio is too loud", "música para el video", "música de spa", "la misma canción", "el audio está duro". It picks the track by the client's niche with common sense (spa or lounge for a beauty salon, percussion for construction, steady industrial for gas and installations, playful for kids' schools, hip-hop for a barbershop), picks at random among eligible tracks, never repeats a track for the same client or between two clients of the same niche, never gives two clients the same track within 3 weeks, uses only sources whose license allows paid ads with a proof file per track, adds the attribution line to the ad copy for CC-BY music, keeps a usage log, and checks loudness on the final video. Not for composing music and not for cutting the edit to the beat (use a beat-sync editing skill).
+  Load before choosing background music for a video, reel, story or ad for a business or a client: "pick music for this video", "soundtrack", "background track", "the same song again", "the audio is too loud", "música para el video", "música de spa", "la misma canción", "el audio está duro". It picks the track by the client's niche with common sense (spa or lounge for a beauty salon, percussion for construction, steady industrial for gas and installations, playful for kids' schools, hip-hop for a barbershop), picks at random among eligible tracks, never repeats a track for the same client or between two clients of the same niche, never gives two clients the same track within 3 weeks, uses only sources whose license allows paid ads with a proof file per track, adds the attribution line to the ad copy for CC-BY music, keeps a usage log, and checks loudness on the final video. Sound effects follow the same rules: real CC0/CC-BY recordings tied to a cue on screen, credited, and checked by ear (real-sound + earshot) instead of synthesized. Not for composing music and not for cutting the edit to the beat (use a beat-sync editing skill).
 license: MIT
 ---
 
@@ -59,6 +59,14 @@ Order of preference that worked for the author (licenses read in Nov 2026; re-re
 **Proof per track:** date, track URL, license URL, author, license, and the certificate or ISRC if there is one. Store it next to the file. No proof, no use.
 
 **Attribution:** for CC-BY tracks, put the exact credit line in the ad's primary text (Meta ads have no description field). If the credit is missing, the video does not ship.
+
+## 4b. Sound effects: real recordings, checked by ear
+Music comes from the picker. Sound effects (a whoosh on a cut, a pop when a card lands, a click on a toggle, room ambience) follow the same license discipline:
+1. **Cue list from the picture:** every effect has a frame and a visible cause. No cause on screen, no sound.
+2. **Real recordings, CC0 or CC-BY only:** Freesound (read the license on each sound's own page) or Openverse (`api.openverse.org/v1/audio/?q=whoosh&license=cc0,by`). Download one by one, only the chosen file. NC, ND, SA and Sampling+ are out. **Do not synthesize in code when a real recording exists.**
+3. **Proof per effect** (link, author, license), exactly like music. CC-BY effects get their credit line in the ad's primary text, once.
+4. **Listen before delivery**, with a listening tool if the agent cannot hear: pick between candidates, reject what sounds synthetic, and check that each hit lands within one frame of its cue. The `real-sound` and `earshot` skills ([leonxlnx/earshot](https://github.com/leonxlnx/earshot)) do this end to end. If the listening tool is not installed, say "not checked by ear". Never report a listening result you did not get.
+5. Effects sit under the voice and never bury the music; the loudness target for the final export does not change.
 
 ## 5. Before delivery
 
