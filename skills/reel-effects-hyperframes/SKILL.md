@@ -12,11 +12,11 @@ Reels titled "30 animations Claude made" get millions of views, and every viewer
 ## 1. Find and add the block
 
 ```bash
-npx hyperframes catalog --query "<effect in English>" --json   # search only
-npx hyperframes add <name> --json                             # copy the block into the project
-npx hyperframes remove-background <video.mp4> -o cutout.webm  # local subject cutout, free
+npx hyperframes@0.9.54 catalog --query "<effect in English>" --json   # search only
+npx hyperframes@0.9.54 add <name> --json                             # copy the block into the project
+npx hyperframes@0.9.54 remove-background <video.mp4> -o cutout.webm  # local subject cutout, free
 ```
-If `catalog` times out, read the registry directly: `https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry/registry.json` (names), and `.../registry/<blocks|components|examples>/<name>/registry-item.json` (description). Never cite a block name you did not see there.
+If `catalog` times out, read the registry directly: `https://raw.githubusercontent.com/heygen-com/hyperframes/52d43f33a3102e3fadfbe3d6d24f18c9f2ea689e/registry/registry.json` (names), and `.../registry/<blocks|components|examples>/<name>/registry-item.json` (description). Never cite a block name you did not see there. Versions are pinned (CLI 0.9.54, registry at a fixed commit); to move to a newer one, show the user the new pin and wait for their yes.
 
 **Ready** = a block does it almost as shown. **Base** = a block does half and you build the rest on top. **By hand** = not in the registry; build it from the recipe.
 

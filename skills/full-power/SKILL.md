@@ -69,7 +69,7 @@ Before answering, list what the model cannot reliably do from memory and route i
 
 - Every miss caught by the verifier, the user or reality goes into one shared error log: date, what went wrong, the rule that would have prevented it.
 - The first step of the next task in that area is reading the relevant part of the log.
-- A rule that fires three times becomes a checklist line or a hook, not a note.
+- A rule that fires three times becomes a checklist line or a hook (a hook only after the user's yes), not a note.
 
 ## 7. Report
 
