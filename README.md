@@ -1,6 +1,6 @@
 # Claude skills for running a business with AI agents
 
-**23 agent skills from a small agency that runs 20+ Claude Code sessions in parallel, every day, for real clients.**
+**25 agent skills from a small agency that runs 20+ Claude Code sessions in parallel, every day, for real clients.**
 
 Each skill fixes a problem that kept happening in that setup: the agent said "done" without checking, sent a wrong price to a client, paused more than it was asked to, got stuck mid-task overnight, burned the plan on the expensive model, or redid the same work three times. Each one comes from real repeated failures in that setup, and each skill's own repo shows what changes with it and without it.
 
@@ -51,6 +51,8 @@ Or copy any folder from `skills/` into `~/.claude/skills/`.
 | Skill | What it fixes |
 |---|---|
 | [hands-on](skills/hands-on) | the agent does what it can and only asks you for codes, keys and payments |
+| [no-obvious-questions](skills/no-obvious-questions) | the agent stops asking what it already knows or can look up; real questions go out once, with its recommendation |
+| [captcha-handoff](skills/captcha-handoff) | you click "I'm not a robot" and the agent carries on by itself, no "done" message; it never takes over your tab |
 | [report-now](skills/report-now) | a status report checked live right now, never an old one |
 | [sort-me-out](skills/sort-me-out) | one ordered list of what is urgent, waiting and forgotten |
 | [easy-for-them](skills/easy-for-them) | steps people actually follow: direct link, one action per line |
@@ -70,7 +72,7 @@ Each skill also has its own repo with a longer README, a with/without example an
 
 ## Español
 
-23 skills para agentes de IA, sacadas de una agencia chica que trabaja todos los días con más de 20 sesiones de Claude Code en paralelo y clientes reales. Cada una arregla un problema que se repetía: decir "listo" sin comprobar, mandar un precio mal, apagar más de lo pedido, quedarse pegado de noche, gastar el plan en el modelo caro. Cada repo muestra qué cambia con la skill y sin ella.
+25 skills para agentes de IA, sacadas de una agencia chica que trabaja todos los días con más de 20 sesiones de Claude Code en paralelo y clientes reales. Cada una arregla un problema que se repetía: decir "listo" sin comprobar, mandar un precio mal, apagar más de lo pedido, quedarse pegado de noche, gastar el plan en el modelo caro. Cada repo muestra qué cambia con la skill y sin ella.
 
 Instalar todas: `npx skills@1.8.1 add https://github.com/RabbitDesigns22/claude-skills/tree/41b6cc564c1cc089d29d13c4006704ce41ed60ec`
 
