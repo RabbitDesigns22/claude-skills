@@ -11,7 +11,7 @@ Mostly plain instructions (`SKILL.md`). Three include short Python scripts you c
 All of them, with the [skills CLI](https://skills.sh) (it asks which ones you want):
 
 ```bash
-npx skills add RabbitDesigns22/claude-skills
+npx skills@1.8.1 add https://github.com/RabbitDesigns22/claude-skills/tree/41b6cc564c1cc089d29d13c4006704ce41ed60ec
 ```
 
 As a Claude Code plugin:
@@ -72,7 +72,7 @@ Each skill also has its own repo with a longer README, a with/without example an
 
 23 skills para agentes de IA, sacadas de una agencia chica que trabaja todos los días con más de 20 sesiones de Claude Code en paralelo y clientes reales. Cada una arregla un problema que se repetía: decir "listo" sin comprobar, mandar un precio mal, apagar más de lo pedido, quedarse pegado de noche, gastar el plan en el modelo caro. Cada repo muestra qué cambia con la skill y sin ella.
 
-Instalar todas: `npx skills add RabbitDesigns22/claude-skills`
+Instalar todas: `npx skills@1.8.1 add https://github.com/RabbitDesigns22/claude-skills/tree/41b6cc564c1cc089d29d13c4006704ce41ed60ec`
 
 If one of them saved you a redo, a star here helps other people find them.
 
