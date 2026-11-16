@@ -1,6 +1,14 @@
 ---
 name: no-obvious-questions
-description: Load right before the agent asks the user anything, whether in prose, with an ask-the-user tool, at the end of a message or as "do you want me to...?". It filters out obvious questions: ones the agent could answer from what it already has, could find with its own tools, could decide with common sense, or that ask permission for something the user already ordered. Only questions that truly need the user's answer get through, and they go out together, once, each with the agent's recommendation. Triggers on the agent being about to ask, "do you want me to", "should I", "shall I", "would you like", "which do you prefer", "confirm?", and on users who say "stop asking me", "you should already know that", "obvious question", "don't ask, just do it".
+description: >-
+  Load right before the agent asks the user anything, whether in prose, with an ask-the-user tool, at
+  the end of a message or as "do you want me to...?". It filters out obvious questions: ones the agent
+  could answer from what it already has, could find with its own tools, could decide with common
+  sense, or that ask permission for something the user already ordered. Only questions that truly need
+  the user's answer get through, and they go out together, once, each with the agent's recommendation.
+  Triggers on the agent being about to ask, "do you want me to", "should I", "shall I", "would you
+  like", "which do you prefer", "confirm?", and on users who say "stop asking me", "you should already
+  know that", "obvious question", "don't ask, just do it".
 ---
 
 # No obvious questions
